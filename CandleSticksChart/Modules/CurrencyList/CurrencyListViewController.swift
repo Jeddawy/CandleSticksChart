@@ -9,11 +9,6 @@ import UIKit
 
 class CurrencyListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 
     /*
@@ -26,4 +21,28 @@ class CurrencyListViewController: UIViewController {
     }
     */
 
+}
+//MARK: - LifeCycle
+
+extension CurrencyListViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+}
+//MARK: - VM -> VC
+extension CurrencyListViewController: CurrencyListViewControllerProtocol{
+    func goToCurrencyDetails(model: CurrencyModel) {
+        //
+    }
+    
+    
+}
+//MARK: - setupUI
+extension CurrencyListViewController{
+    
+    
 }
