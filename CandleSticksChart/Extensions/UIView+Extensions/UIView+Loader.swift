@@ -9,6 +9,7 @@ import UIKit
 extension UIView {
     func showLoader() {
         let activityIndicator = setupActivityIndicator()
+        activityIndicator.startAnimating()
         self.addSubview(activityIndicator)
     }
     
@@ -22,7 +23,8 @@ extension UIView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = self.bounds
         activityIndicator.center = self.center
-        activityIndicator.style = .gray
+        activityIndicator.backgroundColor = .red
+        activityIndicator.style = .large
         activityIndicator.tag = 333
         return activityIndicator
     }
