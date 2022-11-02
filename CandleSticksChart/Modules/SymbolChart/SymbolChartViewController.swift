@@ -49,7 +49,6 @@ extension SymbolChartViewController: SymbolChartViewControllerProtocol{
             let open = Double(Double(arc4random_uniform(6)) + openn)
             let close = Double(Double(arc4random_uniform(6)) + closee)
             print(val, high, low, open, close , "chart data")
-
             return CandleChartDataEntry(x: Double(index), shadowH: high, shadowL: low, open: open , close: close , icon: UIImage())
         }
         
@@ -74,12 +73,10 @@ extension SymbolChartViewController: SymbolChartViewControllerProtocol{
 extension SymbolChartViewController: ChartViewDelegate {
 
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        NSLog("chartValueSelected");
-        print(entry)
+        print(chartView.data?.yMax, chartView.data?.yMin)
     }
     
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
-        NSLog("chartValueNothingSelected");
     }
     
     func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat) {

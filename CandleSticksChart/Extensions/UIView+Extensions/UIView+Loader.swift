@@ -23,7 +23,7 @@ extension UIView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = self.bounds
         activityIndicator.center = self.center
-        activityIndicator.backgroundColor = .red
+        activityIndicator.backgroundColor = .white.withAlphaComponent(0.2)
         activityIndicator.style = .large
         activityIndicator.tag = 333
         return activityIndicator

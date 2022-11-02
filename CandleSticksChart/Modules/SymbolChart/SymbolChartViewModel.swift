@@ -34,9 +34,10 @@ extension SymbolChartViewModel{
         let jsonData = encodeToJSON(model)
         do {
             let result = try JSONDecoder().decode([Item].self, from: jsonData!)
-            print(result.self)
             arr = result
-        } catch { print(error) }
+        } catch {
+            print(error)
+        }
         self.view.getData(arr, title: title)
     }
     

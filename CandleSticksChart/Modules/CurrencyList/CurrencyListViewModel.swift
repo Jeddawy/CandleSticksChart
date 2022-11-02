@@ -48,7 +48,7 @@ extension CurrencyListViewModel{
                 print(failure.localizedDescription)
                 self.view.showError("Something went wrong, please try again later")
             }
+            self.view?.hideLoader()
         }
-        self.view?.hideLoader()
     }
 }

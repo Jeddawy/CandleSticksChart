@@ -39,11 +39,11 @@ extension CurrencyListViewController: CurrencyListViewControllerProtocol{
     }
     
     func showLoader() {
-        self.view?.showLoader()
+        self.view.showLoader()
     }
     
     func hideLoader() {
-        self.view?.hideLoader()
+        self.view.hideLoader()
     }
     
     func showError(_ message: String) {
@@ -83,9 +83,11 @@ extension CurrencyListViewController{
         tableview.roundCorner([.allCorners], radius: 10)
         setupNavigtationTitle()
     }
+    
     private func setupNavigtationTitle(){
         self.title = "Symbols"
     }
+    
     private func setupViewModel(){
         self.viewModel = CurrencyListViewModel(view: self)
     }
