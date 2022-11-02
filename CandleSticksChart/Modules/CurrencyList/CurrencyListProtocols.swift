@@ -8,10 +8,13 @@
 import Foundation
 
 protocol CurrencyListViewControllerProtocol: AnyObject{
-    func goToCurrencyDetails(model: CurrencyModel)
+    func showLoader()
+    func hideLoader()
+    func showError(_ message: String)
+    func goToCurrencyDetails(model: ChartDataResponse)
 }
 
-protocol CurrencyListViewModel{
+protocol CurrencyListViewModelProtocol{
     func getItem(at index: Int)-> CurrencyModel
     func itemsCount()-> Int
     func didTapItem(at index: Int)
