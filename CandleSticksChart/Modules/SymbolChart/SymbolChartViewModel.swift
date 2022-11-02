@@ -12,9 +12,11 @@ class SymbolChartViewModel{
     
     private weak var view: SymbolChartViewControllerProtocol!
     private var model: ChartDataResponse!
+    private var title: String
     private var arr = [Item]()
-    init(view: SymbolChartViewControllerProtocol, model: ChartDataResponse) {
+    init(view: SymbolChartViewControllerProtocol, model: ChartDataResponse, title: String) {
         self.view = view
+        self.title = title
         self.model = model
     }
 
@@ -35,7 +37,7 @@ extension SymbolChartViewModel{
             print(result.self)
             arr = result
         } catch { print(error) }
-        self.view.getData(arr)
+        self.view.getData(arr, title: title)
     }
     
     private func encodeToJSON<T: Encodable>(_ body: T) -> Data? {

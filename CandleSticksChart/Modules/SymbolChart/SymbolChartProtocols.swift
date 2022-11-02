@@ -9,7 +9,7 @@ import Foundation
 import Charts
 
 protocol SymbolChartViewControllerProtocol: AnyObject{
-    func getData(_ dateset: [Item])
+    func getData(_ dateset: [Item], title: String)
 }
 
 protocol SymbolChartViewModelProtocol{

@@ -40,7 +40,7 @@ extension CurrencyListViewModel{
             switch response {
             case .success(let success):
                 if code == 200{
-                    self.view.goToCurrencyDetails(model: success)
+                    self.view.goToCurrencyDetails(model: success, title: symbol)
                 }else{
                     self.view.showError("There is an error")
                 }

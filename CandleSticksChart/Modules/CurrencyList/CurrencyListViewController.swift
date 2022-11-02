@@ -33,8 +33,8 @@ extension CurrencyListViewController{
 //MARK: - VM -> VC
 extension CurrencyListViewController: CurrencyListViewControllerProtocol{
 
-    func goToCurrencyDetails(model: ChartDataResponse) {
-        let vc = SymbolChartViewController.create(model: model)
+    func goToCurrencyDetails(model: ChartDataResponse, title: String) {
+        let vc = SymbolChartViewController.create(model: model, title: title)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

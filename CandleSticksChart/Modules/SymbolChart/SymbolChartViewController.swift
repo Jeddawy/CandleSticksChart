@@ -13,9 +13,9 @@ class SymbolChartViewController: UIViewController {
     @IBOutlet weak var chartView: CandleStickChartView!
     private var viewModel: SymbolChartViewModelProtocol!
     //MARK: - Public Methods
-    class func create(model: ChartDataResponse) -> SymbolChartViewController {
+    class func create(model: ChartDataResponse, title: String) -> SymbolChartViewController {
         let VC: SymbolChartViewController = UIViewController.create(storyboardName: "Main", identifier: "\(SymbolChartViewController.self)")
-        VC.viewModel = SymbolChartViewModel(view: VC, model: model)
+        VC.viewModel = SymbolChartViewModel(view: VC, model: model, title: title)
         return VC
     }
 }
@@ -25,10 +25,7 @@ extension SymbolChartViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        self.title = "Candle Stick Chart"
-        
         viewModel.setup()
         setupChart()
 
@@ -38,7 +35,8 @@ extension SymbolChartViewController{
 
 extension SymbolChartViewController: SymbolChartViewControllerProtocol{
    
-    func getData(_ dateset: [Item]) {
+    func getData(_ dateset: [Item], title: String) {
+        self.title = title
         let yVals1 = dateset.enumerated().map { (index,i) -> CandleChartDataEntry in
             let vall = i.array[3].toDouble() ?? 0
             let highh = i.array[2].toDouble() ?? 0
@@ -67,11 +65,10 @@ extension SymbolChartViewController: SymbolChartViewControllerProtocol{
         set.increasingColor = UIColor(named: "blueColor")
         set.increasingFilled = true
         set.neutralColor = .blue
-        chartView.rightAxis.axisMinimum =  (0.7 * set.yMin)// to make minimum value not zero
+        chartView.rightAxis.axisMinimum = (set.yMin) * 0.8// to make minimum value not zero
+        chartView.rightAxis.axisMaximum = set.yMax * 1.2
         let data = CandleChartData(dataSet: set)
-        print(data.count, "data set count")
         chartView.data = data
-
     }
 }
 extension SymbolChartViewController: ChartViewDelegate {

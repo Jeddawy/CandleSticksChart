@@ -11,7 +11,7 @@ protocol CurrencyListViewControllerProtocol: AnyObject{
     func showLoader()
     func hideLoader()
     func showError(_ message: String)
-    func goToCurrencyDetails(model: ChartDataResponse)
+    func goToCurrencyDetails(model: ChartDataResponse, title: String)
 }
 
 protocol CurrencyListViewModelProtocol{
