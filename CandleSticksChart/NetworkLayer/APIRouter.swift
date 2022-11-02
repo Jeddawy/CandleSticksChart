@@ -26,7 +26,7 @@ enum APIRouter: URLRequestConvertible {
     private var path: String {
         switch self {
         case .currencyDate:
-            return URLs.url
+            return ""
         default:
             return ""
         }
@@ -58,7 +58,6 @@ enum APIRouter: URLRequestConvertible {
         }
 
         print(urlRequest.allHTTPHeaderFields ?? "")
-        print(parameters)
         // HTTP Body
         let httpBody: Data? = {
             switch self {

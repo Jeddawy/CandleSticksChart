@@ -8,7 +8,7 @@
 import Alamofire
 
 class APIManager {
-    static func confirmPayMob(symbole: String, interval: String, limit: String ,completion: @escaping (Result<ChartDataResponse, Error>, _ code: Int?) -> ()){
+    static func currencyDate(symbole: String, interval: String, limit: String ,completion: @escaping (Result<ChartDataResponse, Error>, _ code: Int?) -> ()){
         request(APIRouter.currencyDate(symbole, interval, limit)){
             response, code in
             completion(response, code)
