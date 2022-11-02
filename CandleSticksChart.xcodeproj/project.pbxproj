@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04248AF82911253400BDDD0D /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04248AF72911253400BDDD0D /* UIViewController+Navigation.swift */; };
+		04248AFB29112C3B00BDDD0D /* SymbolChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04248AFA29112C3B00BDDD0D /* SymbolChartViewController.swift */; };
+		04248AFD29112C4D00BDDD0D /* SymbolChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04248AFC29112C4D00BDDD0D /* SymbolChartViewModel.swift */; };
+		04248AFF29112C5600BDDD0D /* SymbolChartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04248AFE29112C5600BDDD0D /* SymbolChartProtocols.swift */; };
 		044412512910B21800359211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044412502910B21800359211 /* AppDelegate.swift */; };
 		044412532910B21800359211 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044412522910B21800359211 /* SceneDelegate.swift */; };
 		044412582910B21800359211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044412562910B21800359211 /* Main.storyboard */; };
 		0444125A2910B21D00359211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044412592910B21D00359211 /* Assets.xcassets */; };
 		0444125D2910B21D00359211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0444125B2910B21D00359211 /* LaunchScreen.storyboard */; };
+		0483BF382912AE320062616B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483BF372912AE320062616B /* String+Extensions.swift */; };
 		0489EAAE2910B55B0037A2E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAAD2910B55B0037A2E0 /* Constants.swift */; };
 		0489EAB22910B5EA0037A2E0 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAB12910B5EA0037A2E0 /* CurrencyListViewController.swift */; };
 		0489EAB42910B6FB0037A2E0 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAB32910B6FB0037A2E0 /* CurrencyListViewModel.swift */; };
@@ -26,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04248AF72911253400BDDD0D /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		04248AFA29112C3B00BDDD0D /* SymbolChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolChartViewController.swift; sourceTree = "<group>"; };
+		04248AFC29112C4D00BDDD0D /* SymbolChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolChartViewModel.swift; sourceTree = "<group>"; };
+		04248AFE29112C5600BDDD0D /* SymbolChartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolChartProtocols.swift; sourceTree = "<group>"; };
 		0444124D2910B21800359211 /* CandleSticksChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleSticksChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044412502910B21800359211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044412522910B21800359211 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +42,7 @@
 		044412592910B21D00359211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0444125C2910B21D00359211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0444125E2910B21D00359211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0483BF372912AE320062616B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0489EAAD2910B55B0037A2E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0489EAB12910B5EA0037A2E0 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		0489EAB32910B6FB0037A2E0 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04248AF92911291900BDDD0D /* SymbolChart */ = {
+			isa = PBXGroup;
+			children = (
+				04248AFA29112C3B00BDDD0D /* SymbolChartViewController.swift */,
+				04248AFC29112C4D00BDDD0D /* SymbolChartViewModel.swift */,
+				04248AFE29112C5600BDDD0D /* SymbolChartProtocols.swift */,
+			);
+			path = SymbolChart;
+			sourceTree = "<group>";
+		};
 		044412442910B21700359211 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +113,14 @@
 			path = CandleSticksChart;
 			sourceTree = "<group>";
 		};
+		0483BF362912AE1E0062616B /* String+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0483BF372912AE320062616B /* String+Extensions.swift */,
+			);
+			path = "String+Extension";
+			sourceTree = "<group>";
+		};
 		0489EAA22910B2EB0037A2E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0489EAAF2910B5BA0037A2E0 /* CurrencyList */,
+				04248AF92911291900BDDD0D /* SymbolChart */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -156,6 +185,7 @@
 		0489EAA92910B34B0037A2E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0483BF362912AE1E0062616B /* String+Extension */,
 				0489EAAB2910B3880037A2E0 /* UIView+Extensions */,
 				0489EAAA2910B36F0037A2E0 /* UIViewController+Extensions */,
 			);
@@ -165,6 +195,7 @@
 		0489EAAA2910B36F0037A2E0 /* UIViewController+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04248AF72911253400BDDD0D /* UIViewController+Navigation.swift */,
 			);
 			path = "UIViewController+Extensions";
 			sourceTree = "<group>";
@@ -330,12 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04248AFB29112C3B00BDDD0D /* SymbolChartViewController.swift in Sources */,
+				04248AF82911253400BDDD0D /* UIViewController+Navigation.swift in Sources */,
 				0489EABA2910B73E0037A2E0 /* CurrencyTableViewCell.swift in Sources */,
 				0489EAC22910BA080037A2E0 /* APIRouter.swift in Sources */,
+				0483BF382912AE320062616B /* String+Extensions.swift in Sources */,
 				0489EAB62910B7130037A2E0 /* CurrencyListProtocols.swift in Sources */,
+				04248AFD29112C4D00BDDD0D /* SymbolChartViewModel.swift in Sources */,
 				0489EAC02910B9840037A2E0 /* UIView+Loader.swift in Sources */,
 				0489EAC42910BB4D0037A2E0 /* APIManager.swift in Sources */,
 				044412512910B21800359211 /* AppDelegate.swift in Sources */,
+				04248AFF29112C5600BDDD0D /* SymbolChartProtocols.swift in Sources */,
 				044412532910B21800359211 /* SceneDelegate.swift in Sources */,
 				0489EABD2910B90E0037A2E0 /* ChartDataModel.swift in Sources */,
 				0489EAB42910B6FB0037A2E0 /* CurrencyListViewModel.swift in Sources */,

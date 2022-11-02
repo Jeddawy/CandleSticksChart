@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEU-vh-cRV">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-jM-ZEf">
-                                <rect key="frame" x="28" y="47" width="334" height="500"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-jM-ZEf">
+                                <rect key="frame" x="16" y="143" width="358" height="132"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="idM-0m-ZuR"/>
+                                    <constraint firstAttribute="height" constant="132" id="idM-0m-ZuR"/>
                                 </constraints>
                             </tableView>
                         </subviews>
@@ -30,19 +30,82 @@
                         <color key="backgroundColor" name="mainColor"/>
                         <constraints>
                             <constraint firstItem="FCd-jM-ZEf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LEK-oE-ecS"/>
-                            <constraint firstItem="FCd-jM-ZEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="Nfu-WD-bKf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FCd-jM-ZEf" secondAttribute="trailing" constant="28" id="SLz-yo-UO2"/>
+                            <constraint firstItem="FCd-jM-ZEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nfu-WD-bKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FCd-jM-ZEf" secondAttribute="trailing" constant="16" id="SLz-yo-UO2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mOc-Db-rKD"/>
+                    <connections>
+                        <outlet property="tableview" destination="FCd-jM-ZEf" id="Spk-wJ-2Iz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="976.92307692307691" y="-2.1327014218009479"/>
+        </scene>
+        <!--Symbol Chart View Controller-->
+        <scene sceneID="8Dt-Jc-VKR">
+            <objects>
+                <viewController storyboardIdentifier="SymbolChartViewController" id="OIT-Qd-h28" customClass="SymbolChartViewController" customModule="CandleSticksChart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eis-uH-J87">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ok5-7s-XKm" customClass="CandleStickChartView" customModule="Charts">
+                                <rect key="frame" x="28" y="75" width="334" height="500"/>
+                                <color key="backgroundColor" name="secondryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="1jG-gA-8un"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4yo-s7-xJv"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <constraints>
+                            <constraint firstItem="Ok5-7s-XKm" firstAttribute="top" secondItem="4yo-s7-xJv" secondAttribute="top" constant="28" id="5eZ-Le-jEz"/>
+                            <constraint firstItem="Ok5-7s-XKm" firstAttribute="leading" secondItem="4yo-s7-xJv" secondAttribute="leading" constant="28" id="iLh-Pa-sy7"/>
+                            <constraint firstItem="4yo-s7-xJv" firstAttribute="trailing" secondItem="Ok5-7s-XKm" secondAttribute="trailing" constant="28" id="viV-4X-hzB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chartView" destination="Ok5-7s-XKm" id="X8l-ws-gy8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-rx-NJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="-1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RHt-iS-A5b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JEU-vh-cRV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" autoresizesSubviews="NO" contentMode="scaleToFill" largeTitles="YES" id="ih5-zQ-qLI">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="textColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4ud-jL-MQh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gA-om-2ck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="mainColor">
-            <color red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13699999451637268" green="0.13699999451637268" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondryColor">
+            <color red="0.19200000166893005" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
