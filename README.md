@@ -23,14 +23,17 @@ List of completed tasks:
     ● After selecting the currency, the application must make a new request with the selected currency to the exchange server in order to get the correct price data.
 
  Bonus Taks No3:-
+ 
     ● Use Firebase for Analytics
     ● Create Event Manager to be reusable.
     
 
 Known Issues:-
+
     ● could'nt put the time scale on the x-axis.
     ● UI of Chart Doesnt match attached Chart in Figma(its close to it) 
 
 Defficulties:-
+
     ● Ploting Data on Candle Chart as the documentation not descriptive.
     ● Data Handling as i used Codable for parsing data , and the array was with different data types.
