@@ -28,7 +28,6 @@ extension SymbolChartViewController{
         // Do any additional setup after loading the view.
         viewModel.setup()
         setupChart()
-
     }
     
 }

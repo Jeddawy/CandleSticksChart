@@ -17,6 +17,8 @@
 		0444125A2910B21D00359211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044412592910B21D00359211 /* Assets.xcassets */; };
 		0444125D2910B21D00359211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0444125B2910B21D00359211 /* LaunchScreen.storyboard */; };
 		0483BF382912AE320062616B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483BF372912AE320062616B /* String+Extensions.swift */; };
+		0483BF3A2912BCA00062616B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0483BF392912BCA00062616B /* GoogleService-Info.plist */; };
+		0483BF3D2913AA440062616B /* AnalyticsEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483BF3C2913AA440062616B /* AnalyticsEventsManager.swift */; };
 		0489EAAE2910B55B0037A2E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAAD2910B55B0037A2E0 /* Constants.swift */; };
 		0489EAB22910B5EA0037A2E0 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAB12910B5EA0037A2E0 /* CurrencyListViewController.swift */; };
 		0489EAB42910B6FB0037A2E0 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489EAB32910B6FB0037A2E0 /* CurrencyListViewModel.swift */; };
@@ -43,6 +45,8 @@
 		0444125C2910B21D00359211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0444125E2910B21D00359211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0483BF372912AE320062616B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0483BF392912BCA00062616B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0483BF3C2913AA440062616B /* AnalyticsEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEventsManager.swift; sourceTree = "<group>"; };
 		0489EAAD2910B55B0037A2E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0489EAB12910B5EA0037A2E0 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		0489EAB32910B6FB0037A2E0 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0489EAA22910B2EB0037A2E0 /* Shared */,
+				0483BF3B2913AA2F0062616B /* Managers */,
 				0489EAA52910B3080037A2E0 /* NetworkLayer */,
 				0489EAA62910B3150037A2E0 /* Utilities */,
 				0489EAA92910B34B0037A2E0 /* Extensions */,
@@ -109,6 +114,7 @@
 				0489EAA32910B2F50037A2E0 /* Modules */,
 				0489EAA72910B32A0037A2E0 /* Resources */,
 				0444125E2910B21D00359211 /* Info.plist */,
+				0483BF392912BCA00062616B /* GoogleService-Info.plist */,
 			);
 			path = CandleSticksChart;
 			sourceTree = "<group>";
@@ -119,6 +125,14 @@
 				0483BF372912AE320062616B /* String+Extensions.swift */,
 			);
 			path = "String+Extension";
+			sourceTree = "<group>";
+		};
+		0483BF3B2913AA2F0062616B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0483BF3C2913AA440062616B /* AnalyticsEventsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		0489EAA22910B2EB0037A2E0 /* Shared */ = {
@@ -307,6 +321,7 @@
 			files = (
 				0489EABB2910B73E0037A2E0 /* CurrencyTableViewCell.xib in Resources */,
 				0444125D2910B21D00359211 /* LaunchScreen.storyboard in Resources */,
+				0483BF3A2912BCA00062616B /* GoogleService-Info.plist in Resources */,
 				0444125A2910B21D00359211 /* Assets.xcassets in Resources */,
 				044412582910B21800359211 /* Main.storyboard in Resources */,
 			);
@@ -375,6 +390,7 @@
 				044412532910B21800359211 /* SceneDelegate.swift in Sources */,
 				0489EABD2910B90E0037A2E0 /* ChartDataModel.swift in Sources */,
 				0489EAB42910B6FB0037A2E0 /* CurrencyListViewModel.swift in Sources */,
+				0483BF3D2913AA440062616B /* AnalyticsEventsManager.swift in Sources */,
 				0489EAB22910B5EA0037A2E0 /* CurrencyListViewController.swift in Sources */,
 				0489EAAE2910B55B0037A2E0 /* Constants.swift in Sources */,
 			);

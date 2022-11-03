@@ -18,6 +18,7 @@ class SymbolChartViewModel{
         self.view = view
         self.title = title
         self.model = model
+        AnalyticsEventsManager.shared().track(event: title)//Log event with name of Symbol
     }
 
 }

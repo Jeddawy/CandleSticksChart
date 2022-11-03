@@ -8,6 +8,7 @@ target 'CandleSticksChart' do
   # Pods for CandleSticksChart
     pod 'Alamofire', '~> 5.0.5'
     pod 'Charts'
+    pod 'Firebase'
 
 
 end
